@@ -1,0 +1,87 @@
+body {
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    color: #fff;
+    font-family: 'Roboto',sans-serif;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#info {
+    align-items: flex-start;
+    margin: 5% auto auto 15%;
+}
+
+h1{
+    font-size: 75px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+
+span:nth-child(1) {
+    background-color: coral;
+    transition: background-color 0.5s cubic-bezier(.55,.09,.68,.53);
+}
+
+span:nth-child(2){
+    background: -webkit-linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+#picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto auto auto;
+}
+
+#avatar {
+    width: 25%;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 40px 5px coral;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.logo {
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid white;
+    width: 5.5%;
+    cursor: pointer;
+}
+
+.show{
+    animation: ball 1s forwards ease;
+}
+
+.hide{
+    animation: ballrev 1s forwards ease;
+}
+
+@keyframes ball{
+    100%{
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+@keyframes ballrev{
+    0%{
+        transform: translate(var(--x), var(--y));
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
